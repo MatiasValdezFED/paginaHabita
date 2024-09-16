@@ -10,16 +10,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <BrowserRouter>
-      <ShoppingCartProvider>
-        <NavBar />
+      <NavBar />
 
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about-us" element={<AboutUs />} />
-          <Route exact path="/services" element={<Services />} />
-          <Route exact path="/contact" element={<Contact />} />
-        </Routes>
-      </ShoppingCartProvider>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
+        <Route exact path="/services" element={<Services />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
     </BrowserRouter>
   );
 }
