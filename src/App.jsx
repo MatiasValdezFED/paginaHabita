@@ -1,10 +1,9 @@
 import React from "react";
 import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailConteiner from "./components/ItemDetailConteiner";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
-import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -15,23 +14,10 @@ function App() {
         <NavBar />
 
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <ItemListContainer greeting="Bienvenidos a Entre Hilos!" />
-            }
-          />
-          <Route
-            exact
-            path="/category/:category"
-            element={
-              <ItemListContainer greeting="Bienvenidos a Entre Hilos!" />
-            }
-          />
-          <Route exact path="/item/:id" element={<ItemDetailConteiner />} />
-          <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about-us" element={<AboutUs />} />
+          <Route exact path="/services" element={<Services />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </ShoppingCartProvider>
     </BrowserRouter>

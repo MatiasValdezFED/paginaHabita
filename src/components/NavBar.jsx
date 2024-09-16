@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import CartWidget from "./CartWidget";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "../index.css";
@@ -14,25 +13,21 @@ function ColorSchemesExample() {
         <Container>
           <Link to={"/"}>
             <Navbar.Brand>
-              <img
-                className="imgLogo"
-                src="src/assets/images/logo/logo.png"
-                alt="Habita Logo"
-              />
+              <img className="imgLogo" src="/logo.png" alt="Habita Logo" />
             </Navbar.Brand>
           </Link>
 
-          <Nav className="me-auto">
-            <Link className="linkNav" to={`/category/Hilos`}>
+          <Nav className="ml-auto">
+            <Link className="linkNav" to={"/"}>
               Inicio
             </Link>
-            <Link className="linkNav2" to={`/category/Tejidos`}>
+            <Link className="linkNav" to={"/about-us"}>
               ¿Quiénes Somos?
             </Link>
-            <Link className="linkNav" to={`/category/Cierres`}>
+            <Link className="linkNav" to={"/services"}>
               Servicios
             </Link>
-            <Link className="linkNav" to={`/category/Elásticos`}>
+            <Link className="linkNav" to={"/contact"}>
               Contacto
             </Link>
           </Nav>
