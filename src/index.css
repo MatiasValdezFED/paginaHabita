@@ -417,3 +417,42 @@ button {
 .resumen {
   margin-left: 40%;
 }
+
+/* Footer */
+.footer-container {
+  background-color: #BDBDBD; /* Color de fondo */
+  padding: 20px 0;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 10px;
+}
+
+.icon-box {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:  100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: white;
+
+  /*display: inline-block;*/
+  margin: 0 15px;
+  transition: transform 0.3s;
+}
+
+
+.icon-box:hover {
+  transform: scale(1.2);
+}
+
+p {
+  margin-top: 10px;
+  color: #333;
+}

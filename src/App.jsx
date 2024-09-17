@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
@@ -18,6 +19,8 @@ function App() {
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
