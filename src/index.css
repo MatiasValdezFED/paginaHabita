@@ -456,3 +456,117 @@ p {
   margin-top: 10px;
   color: #333;
 }
+
+
+/* ESTILOS DEL INICIO */
+
+/* Establecer un tamaño máximo para las imágenes del carrusel */
+.carousel-item img {
+  width: 100%;        /* Mantener el ancho completo del carrusel */
+  max-height: 500px;  /* Cambia este valor según el alto máximo deseado */
+  object-fit: cover;  /* Asegura que la imagen mantenga una proporción adecuada */
+}
+
+/* Ajuste responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 300px; /* Reduce el alto para pantallas más pequeñas */
+  }
+}
+
+/* Contenedor de los textos (mantiene todo centrado y alineado) */
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  min-height: 300px; /* Ajusta este valor para que todos los textos tengan la misma altura */
+}
+
+/* Texto superior (globo) */
+.small-text {
+  background-color: #00293c;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-family: Montserrat, sans-serif; /* Asegúrate de incluir una fuente de respaldo */
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin: 0; /* Elimina márgenes predeterminados si es necesario */
+}
+
+/* Texto principal del medio */
+.large-text {
+  font-family: Montserrat, sans-serif; /* Asegúrate de incluir una fuente de respaldo */
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 97.52px;
+  text-align: center;
+  margin: 0 0 20px 0; /* Mantén el margen inferior como está */
+  padding: 10px 0; /* Mantén el padding como está */
+  min-height: 3.5rem; /* Define una altura mínima para mantener el espacio reservado */ 
+
+}
+
+/* Texto inferior (globo) */
+.button-text {
+  background-color: #00293c;
+  font-family: Montserrat, sans-serif; /* Asegúrate de incluir una fuente de respaldo */
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 42.67px;
+  text-align: center;
+  color: white; /* Mantiene el color del texto blanco */
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  border: 2px solid #ce2200;  
+  transition: background-color 0.3s ease;
+}
+
+
+/* ESTILOS DE SERVICIOS */
+
+.image-container {
+  display: flex;
+  flex-direction: column; /* Pone las imágenes en una sola columna */
+  align-items: center;    /* Centra las imágenes horizontalmente */
+  gap: 20px;              /* Espacio entre imágenes */
+  padding-bottom: 20px;   /* Espacio al final del contenedor */
+
+  /*width: 100vw; /* Asegura que el contenedor abarque el ancho completo de la pantalla */
+  /*overflow-x: hidden; /* Evita el desplazamiento horizontal si las imágenes son más grandes que la pantalla */
+
+}
+
+.image-container img {
+  max-width: 100%; /* Ajusta el ancho máximo de las imágenes al contenedor */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  /*border-radius: 10px; /* Bordes redondeados opcional */
+}
+
+/* Texto superior (globo) */
+.service-text {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    font-weight: 700; /* Bolt es equivalente a font-weight: 700 */
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0; /* Elimina márgenes predeterminados si es necesario */
+}
