@@ -1,16 +1,20 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel from 'react-bootstrap/Carousel'; //instalar npm install react-bootstrap bootstrap
+import Carousel from "react-bootstrap/Carousel";
 
-import '../index.css';
+import "../index.css";
 
 function Home() {
   return (
-    <div>     
-
-      <h1>   </h1>;
-
-      <Carousel fade interval={3000} controls={false} indicators={false} pause="false">
+    <div>
+      <h1> </h1>;
+      <Carousel
+        fade
+        interval={3000}
+        controls={false}
+        indicators={false}
+        pause="false"
+      >
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -18,15 +22,20 @@ function Home() {
             alt="Primera imagen"
           />
           <Carousel.Caption>
-            
-              <p className="small-text">Tu próximo hogar está acá</p>
-              <p > </p>
-              <h2 className="large-text">Tu confianza,<br /> nuestra prioridad</h2>
-              <p > </p>
-              <a href="https://wa.me/message/GABFF33RIWHXJ1" target="_blank" rel="noopener noreferrer">
-                <p className="button-text">Contactá con un asesor</p>
-              </a>
-            
+            <p className="small-text">Tu próximo hogar está acá</p>
+            <p> </p>
+            <h2 className="large-text">
+              Tu confianza,
+              <br /> nuestra prioridad
+            </h2>
+            <p> </p>
+            <a
+              href="https://wa.me/message/GABFF33RIWHXJ1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="button-text">Contactá con un asesor</p>
+            </a>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -37,15 +46,19 @@ function Home() {
             alt="Segunda imagen"
           />
           <Carousel.Caption>
-            
-              <p className="small-text">Tu próximo hogar está acá</p>
-              <p > </p>
-              <h2 className="large-text">Encontrá el lugar <br /> que mejor va con vos</h2>
-              <p > </p>
-              <a href="https://wa.me/message/GABFF33RIWHXJ1" target="_blank" rel="noopener noreferrer">
-                <p className="button-text">Contactá con un asesor</p>
-              </a>
-            
+            <p className="small-text">Tu próximo hogar está acá</p>
+            <p> </p>
+            <h2 className="large-text">
+              Encontrá el lugar <br /> que mejor va con vos
+            </h2>
+            <p> </p>
+            <a
+              href="https://wa.me/message/GABFF33RIWHXJ1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="button-text">Contactá con un asesor</p>
+            </a>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -56,24 +69,25 @@ function Home() {
             alt="Tercera imagen"
           />
           <Carousel.Caption>
-            
-              <p className="small-text">Tu próximo hogar está acá</p>
-              <p > </p>
-              <h2 className="large-text">
-                Nosotros administramos,<br />
-                vos administrá tu tiempo
-              </h2>
-              <p > </p>
-              <a href="https://wa.me/message/GABFF33RIWHXJ1" target="_blank" rel="noopener noreferrer">
-                <p className="button-text">Contactá con un asesor</p>
-              </a>
-            
+            <p className="small-text">Tu próximo hogar está acá</p>
+            <p> </p>
+            <h2 className="large-text">
+              Nosotros administramos,
+              <br />
+              vos administrá tu tiempo
+            </h2>
+            <p> </p>
+            <a
+              href="https://wa.me/message/GABFF33RIWHXJ1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="button-text">Contactá con un asesor</p>
+            </a>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-      <h1>   </h1>;
-
+      <h1> </h1>;
     </div>
   );
 }
