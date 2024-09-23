@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -27,8 +27,6 @@ body {
   margin: 0;
   padding: 0;
   place-items: center;
-  /* min-width: 320px;
-  min-height: 100vh; */
 }
 
 h1 {
@@ -653,14 +651,14 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh; /* Hace que el contenido esté centrado verticalmente */
+  height: 40vh;
 }
 
 .title {
   font-family: "Inter-Light", Helvetica;
   font-size: 36px;
   color: #f62a00;
-  margin-bottom: 20px; /* Separación entre el título y el formulario */
+  margin-bottom: 20px;
 }
 
 /* Estilo para el formulario */
@@ -669,7 +667,7 @@ p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 700px; /* Define el ancho máximo del formulario */
+  max-width: 360px;
 }
 
 /* Estilo para la fila de Nombre y Correo */
@@ -678,13 +676,13 @@ p {
   justify-content: space-between;
   flex-wrap: nowrap !important;
   width: 50% !important;
-  margin-bottom: 20px; /* Espacio debajo de la fila */
+  margin-bottom: 20px;
   margin-left: calc(-15.5* var(--bs-gutter-x)) !important;
 }
 
 /* Estilo para los inputs de Nombre y Correo */
 .input {
-  width: 48%; /* Cada input ocupa 48% del espacio disponible para estar uno al lado del otro */
+  width: 48%;
   height: 50px;
   padding: 0 15px;
   border: 1px solid #b3b3b3;
@@ -695,13 +693,18 @@ p {
 
 /* Estilo para el textarea de Mensaje */
 .textarea {
-  width: 102%;
+  width: 168%;
   height: 120px;
   padding: 15px;
   border: 1px solid #b3b3b3;
   border-radius: 5px;
   font-size: 16px;
-  margin-bottom: 20px; /* Espacio debajo del mensaje */
+  margin-bottom: 20px;
+}
+
+.required-asterisk {
+  color: red; /* Color rojo para el asterisco */
+  margin-left: 5px; /* Espacio entre el campo y el asterisco */
 }
 
 /* Botón Enviar */
@@ -717,22 +720,125 @@ p {
 }
 
 .submit-btn:hover {
-  background-color: #004466; /* Cambia el color cuando el mouse está sobre el botón */
+  background-color: #004466;
 }
 
 /* About Us */
 .about-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh; /* Ajusta según el espacio disponible */
+  min-height: 100vh;
   text-align: center;
   background-color: white;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 
-.about-image {
-  max-width: 100%;
-  height: 99%;
-  border-radius: 10px;
+/* Imagen de fondo con opacidad */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 57%;
+  background-image: url('src/assets/images/about/aboutus.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Contenido principal */
+.about-content {
+  z-index: 1;
+  max-width: 800px;
+}
+
+.about-title {
+  font-size: 36px;
+  color: #00293c;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Sección del equipo */
+.team-section {
+  z-index: 1;
+}
+
+.team-title {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #00293c;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 30px 0;
+  border-radius: 18px;
+}
+
+/* Contenedor de miembros del equipo */
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 324px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Miembro del equipo */
+.team-member {
+  text-align: center;
+  color: #00293c;
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */
+  flex-direction: column;   /* Coloca los elementos en columna */ 
+}
+
+/* Estilo para las fotos circulares */
+.team-photo {
+  width: 150px;       /* Tamaño del círculo (puedes ajustar) */
+  height: 150px;      /* Tamaño del círculo (igual al ancho para hacer un círculo) */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  background-color: #ccc; /* Color de fondo de ejemplo (para mostrar el círculo si no hay imagen) */
+  display: flex;      /* Flexbox en la imagen también, para centrar la imagen dentro del círculo */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid red;
+  box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.team-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Nombre del miembro */
+.team-name {
+  font-size: 18px;
+  margin: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid red;
+}
+
+/* Descripción del rol del miembro */
+.team-role {
+  font-size: 16px;
+  color: #666;
+  max-width: 200px;
 }

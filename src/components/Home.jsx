@@ -18,7 +18,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={"src/assets/images/inicio/img1.png"}
+            src={"src/assets/images/inicio/img1.jpg"}
             alt="Primera imagen"
           />
           <Carousel.Caption>
