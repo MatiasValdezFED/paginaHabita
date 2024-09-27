@@ -4,6 +4,8 @@ import "../index.css";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
+import emailjs from "emailjs-com"; // Agrega esta línea y oprevio instalar esto npm install emailjs-com
+
 function Contact() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,6 +19,14 @@ function Contact() {
   const handlePhoneChange = (e) => {
     const numericValue = e.target.value.replace(/\D/g, "");
     setPhone(numericValue);
+  };
+
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    // Verificar que el valor no contenga números
+    if (/^[a-zA-Z\s]*$/.test(value)) {
+      setName(value);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -75,6 +85,34 @@ function Contact() {
         },
       }).showToast();
 
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // NUEVO: Enviar correo con EmailJS
+      const templateParams = {
+        from_name: name,
+        to_name: "Cliente", // Reemplaza con el nombre de tu cliente
+        phone,
+        email,
+        message,
+      };
+
+      emailjs
+        .send(
+          "service_id_habita",
+          "template_id_habita",
+          templateParams,
+          "H45hs3RJ60sQP5Man"
+        )
+        .then((response) => {
+          console.log(
+            "Correo enviado exitosamente:",
+            response.status,
+            response.text
+          );
+        });
+
+      /////////////////////////////////////
+
       // Limpiar los campos del formulario después de enviar
       setName("");
       setPhone("");
@@ -103,7 +141,7 @@ function Contact() {
             placeholder="Nombre"
             className="input"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleNameChange} // Cambiado a handleNameChange, antes era asi -> onChange={(e) => setName(e.target.value)}
           />
           <input
             type="tel"

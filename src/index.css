@@ -83,6 +83,7 @@ button:focus-visible {
   gap: 0px;
   opacity: 0px;
   object-fit: contain;
+  border-bottom: 1px solid red;
 }
 
 .nav {
