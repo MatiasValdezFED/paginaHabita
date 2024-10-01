@@ -80,8 +80,6 @@ function Contact() {
       setIsLoading(true); // NUEVO: Activar el spinner cuando se inicie el proceso de envío
       await addDoc(msgsCollection, mensajeWeb);
 
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
       // NUEVO: Enviar correo con EmailJS
       const templateParams = {
         from_name: name,
@@ -106,8 +104,6 @@ function Contact() {
           );
         });
 
-      ////////////////////////////////////
-
       // Limpiar los campos del formulario después de enviar
       setName("");
       setPhone("");
@@ -128,10 +124,8 @@ function Contact() {
         }).showToast();
       }, 2000);
     } catch (error) {
-      // NUEVO: Mantener el spinner activo por 2 segundos incluso si hay un error
       setTimeout(() => {
         setIsLoading(false); // Desactivar el spinner después de 2 segundos
-        // NUEVO: Mostrar el mensaje de error después de que se desactive el spinner
         Toastify({
           text: "Error al enviar el mensaje.",
           className: "info",
@@ -147,53 +141,70 @@ function Contact() {
 
   return (
     <div className="containerContact">
-      <h1 className="title">Comunicate con nosotros</h1>
-      <form onSubmit={handleSubmit} className="form-group">
-        <div className="row">
-          <input
-            type="text"
-            placeholder="Nombre"
-            className="input"
-            value={name}
-            onChange={handleNameChange} // Cambiado a handleNameChange, antes era asi -> onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="tel"
-            placeholder="Teléfono"
-            className="input"
-            value={phone}
-            onChange={handlePhoneChange}
-          />
-          <input
-            type="email"
-            placeholder="Correo"
-            className="input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <textarea
-          placeholder="Mensaje"
-          className="textarea"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <button type="submit" className="submit-btn" disabled={isLoading}>
-          {" "}
-          {/* NUEVO: Desactivamos el botón cuando el spinner está activo */}
-          {isLoading ? ( // NUEVO: Mostrar spinner si está en proceso de envío
-            <Spinner
-              as="span"
-              animation="border"
-              size="sm"
-              role="status"
-              aria-hidden="true"
+      {/* Columna izquierda: Formulario */}
+      <div className="leftColumn">
+        <h1 className="title">Comunicate con nosotros</h1>
+        <form onSubmit={handleSubmit} className="form-group">
+          <div className="row">
+            <input
+              type="text"
+              placeholder="Nombre"
+              className="input"
+              value={name}
+              onChange={handleNameChange}
             />
-          ) : (
-            "Enviar"
-          )}
-        </button>
-      </form>
+            <input
+              type="tel"
+              placeholder="Teléfono"
+              className="input"
+              value={phone}
+              onChange={handlePhoneChange}
+            />
+            <input
+              type="email"
+              placeholder="Correo"
+              className="input"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <textarea
+            placeholder="Mensaje"
+            className="textarea"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <button type="submit" className="submit-btn" disabled={isLoading}>
+            {isLoading ? (
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+              />
+            ) : (
+              "Enviar"
+            )}
+          </button>
+        </form>
+      </div>
+
+      {/* Columna derecha: Mapa */}
+      <div className="rightColumn">
+        {/* Google Maps iframe */}
+        <div className="map-container">
+          <iframe
+            title="Ubicación Inmobiliaria"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.455624651259!2d-64.20004882362531!3d-31.40157059553653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329889a471325f%3A0x7fbfa9ebb33ea9a7!2sSta%20Fe%20944%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1727742766975!5m2!1ses-419!2sar"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 }
