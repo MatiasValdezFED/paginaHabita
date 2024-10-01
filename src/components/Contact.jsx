@@ -5,12 +5,14 @@ import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
 import emailjs from "emailjs-com"; // Agrega esta línea y oprevio instalar esto npm install emailjs-com
+import Spinner from "react-bootstrap/Spinner"; // NUEVO: Importamos Spinner de react-bootstrap
 
 function Contact() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // NUEVO: Estado para manejar el estado de carga
 
   const db = getFirestore();
 
@@ -75,15 +77,8 @@ function Contact() {
     const msgsCollection = collection(db, "mensajesWeb");
 
     try {
+      setIsLoading(true); // NUEVO: Activar el spinner cuando se inicie el proceso de envío
       await addDoc(msgsCollection, mensajeWeb);
-      Toastify({
-        text: "¡Mensaje Enviado!",
-        className: "info",
-        position: "center bottom",
-        style: {
-          background: "linear-gradient(to right, #f62a00, #f62a00)",
-        },
-      }).showToast();
 
       /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -111,23 +106,42 @@ function Contact() {
           );
         });
 
-      /////////////////////////////////////
+      ////////////////////////////////////
 
       // Limpiar los campos del formulario después de enviar
       setName("");
       setPhone("");
       setEmail("");
       setMessage("");
+
+      // NUEVO: Mantener el spinner activo por 2 segundos después de enviar el mensaje
+      setTimeout(() => {
+        setIsLoading(false); // Desactivar el spinner después de 2 segundos
+        // NUEVO: Mostrar el mensaje de éxito después de que se desactive el spinner
+        Toastify({
+          text: "¡Mensaje Enviado!",
+          className: "info",
+          position: "center bottom",
+          style: {
+            background: "linear-gradient(to right, #f62a00, #f62a00)",
+          },
+        }).showToast();
+      }, 2000);
     } catch (error) {
+      // NUEVO: Mantener el spinner activo por 2 segundos incluso si hay un error
+      setTimeout(() => {
+        setIsLoading(false); // Desactivar el spinner después de 2 segundos
+        // NUEVO: Mostrar el mensaje de error después de que se desactive el spinner
+        Toastify({
+          text: "Error al enviar el mensaje.",
+          className: "info",
+          position: "center bottom",
+          style: {
+            background: "linear-gradient(to right, red, red)",
+          },
+        }).showToast();
+      }, 2000);
       console.error("Error adding document: ", error);
-      Toastify({
-        text: "Error al enviar el mensaje.",
-        className: "info",
-        position: "center bottom",
-        style: {
-          background: "linear-gradient(to right, red, red)",
-        },
-      }).showToast();
     }
   };
 
@@ -164,8 +178,20 @@ function Contact() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button type="submit" className="submit-btn">
-          Enviar
+        <button type="submit" className="submit-btn" disabled={isLoading}>
+          {" "}
+          {/* NUEVO: Desactivamos el botón cuando el spinner está activo */}
+          {isLoading ? ( // NUEVO: Mostrar spinner si está en proceso de envío
+            <Spinner
+              as="span"
+              animation="border"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+          ) : (
+            "Enviar"
+          )}
         </button>
       </form>
     </div>

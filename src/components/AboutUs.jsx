@@ -7,7 +7,9 @@ function AboutUs() {
       {/* Elimina esta etiqueta de imagen */}
       {/* <img className="about-image" src="src/assets/images/about/aboutus.jpg" alt="About Us" /> */}
 
-      <div className="background-overlay"></div>
+      <div className="background-overlay">
+        <div class="whiteBar"></div>
+      </div>
 
       {/* Título y descripción */}
       <div className="about-content">

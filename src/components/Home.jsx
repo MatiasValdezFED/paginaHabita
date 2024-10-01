@@ -7,7 +7,7 @@ import "../index.css";
 function Home() {
   return (
     <div>
-      <h1> </h1>;
+      <div class="white-bar"></div>
       <Carousel
         fade
         interval={3000}
