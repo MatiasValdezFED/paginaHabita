@@ -6,9 +6,7 @@ import "../index.css";
 function Services() {
   return (
     <div>
-      <p> </p>
       <p className="service-text">Nuestros Servicios</p>
-      <p> </p>
 
       {/* Carrusel con intervalos y controles personalizados */}
       <Carousel
