@@ -193,6 +193,16 @@ function Contact() {
       {/* Columna derecha: Mapa */}
       <div className="rightColumn">
         {/* Google Maps iframe */}
+        <div className="ubiConteiner">
+          <h5 className="countryTitle">Argentina</h5>
+          <p className="streetDescription">
+            AV. Santa Fe 944 - Piso 1 - Oficina C
+            <br />
+            (5000) - Ciudad de Córdoba
+            <br />
+            Córdoba
+          </p>
+        </div>
         <div className="map-container">
           <iframe
             title="Ubicación Inmobiliaria"

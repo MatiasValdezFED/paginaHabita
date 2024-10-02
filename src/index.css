@@ -75,59 +75,96 @@ button:focus-visible {
 
 /* NavBar */
 
-.imgLogo {
-  width: 715px;
+.container-div{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.img-logo.image-big {
+  width: auto;
   height: 268px;
-  top: 72px;
-  left: 345px;
-  gap: 0px;
-  opacity: 0px;
-  object-fit: contain;
-  border-bottom: 1px solid red;
+  border-bottom: 3px solid red;
+  transition: all 0.3s ease-in-out; 
+}
+
+.img-logo.image-small{
+  height: 50px;
+  width: auto;
+  max-width: 100px;
+  transition: all 0.3s ease-in-out; 
+
+}
+
+.img-logo.hidden{
+  opacity: 0;
+}
+
+.img-logo.displayed{
+  opacity: 1;
 }
 
 .nav {
   background-color: #00293c !important;
   color: white;
   width: 100%;
-  height: 412px;
 }
 
-.navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-lg,
-.navbar > .container-md,
-.navbar > .container-sm,
-.navbar > .container-xl,
-.navbar > .container-xxl {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: column-reverse;
+.navbar-expand .navbar-nav {
+  flex-direction: row; /* Alinear elementos del navbar en fila */
 }
-.ml-auto {
-  margin-left: auto !important;
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #00293c !important;
+  width: 100%;
+}
+
+.menu-items-container{
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-items{
+  display: flex;
   gap: 40px;
 }
 
 .navbar-nav {
-  margin-bottom: 35px;
+  margin-bottom: 0; /* Eliminar el margen inferior */
 }
 
-a.linkNav2 {
-  margin-right: -8px;
-  width: 135px;
-  color: white;
-  margin: 10px;
+.link-nav {
+  text-decoration: none; /* Sin subrayado en los enlaces */
+  color: white; /* Color del texto del enlace */
+  position: relative; /* Posicionamiento relativo para los efectos */
 }
 
-.linkNav {
-  text-decoration: none;
-  color: white;
-  margin: 10px;
+.link-nav:hover {
+  color: white; /* Color del enlace al pasar el ratón */
 }
 
+.link-nav::after {
+  content: ""; 
+  position: absolute;
+  left: 0; 
+  top: 25px;
+  width: 0; 
+  height: 2px; 
+  background-color: red;
+  transition: width 0.7s ease-in-out; 
+}
+
+.link-nav:hover::after {
+  width: 100%; /* Expandir al 100% al pasar el ratón */
+}
+
+/* Boton flotante de WP */
 .wp__container i {
   position: fixed;
   width: 65px;
@@ -388,7 +425,6 @@ p {
 /* Ajuste del tamaño del carrusel */
 .services-carousel {
   overflow-y: auto; /* Permite el desplazamiento vertical si la imagen es más alta que el viewport */
-  width: 100vw; /* Asegura que el carrusel cubra todo el ancho del viewport */
 }
 
 /* Ajuste del área del carrusel */
@@ -430,8 +466,6 @@ p {
 
 .containerContact {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   margin-bottom: 20px;
   margin-top: 16px;
   height: 63vh;
@@ -439,19 +473,20 @@ p {
 }
 
 .leftColumn {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 45%;
 }
 
 .rightColumn {
   flex: 1;
-  background-color: #f5f5f5;
+  background-color: #00293c;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .title {
@@ -529,19 +564,41 @@ p {
 }
 
 .rightColumn {
-  flex: 1;
-  background-color: #f5f5f5;
+  background-color: #00293c;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
 .map-container {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 85%;
   border-radius: 10px;
   overflow: hidden;
 }
+
+.ubiConteiner{
+  position: relative;
+  padding: 40px;
+  margin-bottom: 35%;
+}
+
+.countryTitle {
+  color: white;
+  letter-spacing: 0px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 7px;
+}
+
+.streetDescription {
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  width: 115%;
+}
+
 
 
 /* About Us */
@@ -598,7 +655,7 @@ p {
   margin: 0 auto 20px;
   position: relative;
   z-index: 1; 
-  margin-top: 30px;
+  margin-top: 50px;
 
 
 }

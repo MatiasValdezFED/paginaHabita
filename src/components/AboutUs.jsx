@@ -8,7 +8,7 @@ function AboutUs() {
       {/* <img className="about-image" src="src/assets/images/about/aboutus.jpg" alt="About Us" /> */}
 
       <div className="background-overlay">
-        <div class="whiteBar"></div>
+        <div className="whiteBar"></div>
       </div>
 
       {/* Título y descripción */}
