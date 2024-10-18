@@ -501,10 +501,10 @@ p {
   line-height: 40px;
   text-align: center;
   display: table;
-  margin: 10px auto;
   position: relative;
   z-index: 1;
   margin-bottom: 25px;
+
 }
 
 /* Estilo para el formulario */
@@ -758,3 +758,103 @@ p {
   height: calc(1rem);
 }
 
+/* Responsividad */
+
+/* @media (max-width: 2560px) {
+
+  .about-container {
+    justify-content: space-evenly;
+}
+
+  .background-overlay {
+  height: 52%;
+  }
+
+  .about-content {
+    margin-bottom: 50px;
+}
+
+  .about-title {
+    font-size: 47px;
+    line-height: 54px;
+    margin-top: 0px;
+  }
+
+  .about-description {
+    font-size: 22px;
+  }
+
+  .team-title {
+    font-size: 35px;
+    margin-bottom: 118px;
+  }
+
+  .team-section {
+    margin-bottom: 240px;
+  }
+
+  .team-name {
+    font-size: 40px;
+    margin: 47px 0px;
+  }
+
+  .team-role {
+    font-size: 25px;
+  }
+} */
+
+@media (max-width: 425px) {
+
+  .icon-container {
+    display: flex;
+    gap: 0px;
+  }
+
+  .icon-box {
+    width: 75px;
+    height: 40px;
+  }
+
+  .navbar-nav {
+    display: contents !important;
+  }
+
+  .img-logo.image-big {
+    height: 100px;
+}
+
+.team-members {
+
+  gap: 5px;
+}
+
+.about-title {
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 33px;
+}
+
+.team-title {
+  font-size: 20px;
+  margin: 0 0;
+}
+
+.team-photo {
+  width: 130px;
+  height: 126px;
+}
+
+.team-name {
+  font-size: 15px;
+}
+
+.team-role {
+  font-size: 14px;
+}
+
+.about-description {
+  font-size: 14px;
+}
+
+
+}

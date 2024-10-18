@@ -51,7 +51,7 @@ function ColorSchemesExample() {
                   className={`img-logo image-small ${
                     isScrolled ? "displayed" : "hidden"
                   }`}
-                  src="/logo.png"
+                  src="/logo_solo.png"
                   alt="Habita Logo"
                 />
               </Navbar.Brand>
