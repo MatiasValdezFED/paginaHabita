@@ -758,50 +758,109 @@ p {
   height: calc(1rem);
 }
 
-/* Responsividad */
+/* Responsive */
 
-/* @media (max-width: 2560px) {
-
-  .about-container {
-    justify-content: space-evenly;
-}
-
-  .background-overlay {
-  height: 52%;
-  }
-
-  .about-content {
-    margin-bottom: 50px;
-}
-
-  .about-title {
-    font-size: 47px;
-    line-height: 54px;
-    margin-top: 0px;
-  }
+@media (max-width: 2560px){
 
   .about-description {
-    font-size: 22px;
+    font-size: 25px;
   }
 
-  .team-title {
-    font-size: 35px;
-    margin-bottom: 118px;
-  }
-
-  .team-section {
-    margin-bottom: 240px;
+  .team-photo {
+    width: 220px;
+    height: 220px;
   }
 
   .team-name {
-    font-size: 40px;
-    margin: 47px 0px;
+    font-size: 30px;
   }
 
   .team-role {
-    font-size: 25px;
+    font-size: 23px;
   }
-} */
+  
+
+}
+
+@media (max-width: 1440px){
+
+  .about-description {
+    font-size: 17px  !important;
+  }
+
+  .team-members {
+    gap: 223px;
+  }
+
+  .team-role {
+    font-size: 20px !important;
+  }
+
+  .team-photo {
+    width: 175px  !important;
+    height: 170px  !important;
+  }
+
+  .team-name {
+    font-size: 25px !important;
+}
+
+}
+
+@media (max-width: 1024px){
+
+  .team-members {
+    gap: 213px;
+  }
+
+  .about-description {
+    font-size: 17px  !important;
+}
+
+.team-role {
+  font-size: 18px !important;
+}
+
+.team-photo {
+  width: 175px  !important;
+  height: 170px  !important;
+}
+
+.team-name {
+  font-size: 22px !important;
+}
+
+}
+
+
+@media (max-width: 768px) {
+
+.team-members {
+  gap: 120px;
+}
+
+.team-role {
+  font-size: 17px !important;
+}
+
+.icon-container {
+  gap: 33px;
+}
+
+.about-description {
+  font-size: 15px !important;
+}
+
+.team-photo {
+  width: 160px  !important;
+  height: 155px  !important;
+}
+
+.team-name {
+  font-size: 20px !important;
+}
+
+}
 
 @media (max-width: 425px) {
 
@@ -824,7 +883,6 @@ p {
 }
 
 .team-members {
-
   gap: 5px;
 }
 
@@ -840,21 +898,57 @@ p {
 }
 
 .team-photo {
-  width: 130px;
-  height: 126px;
+  width: 130px !important;
+  height: 126px !important
 }
 
 .team-name {
-  font-size: 15px;
+  font-size: 15px !important;
 }
 
 .team-role {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .about-description {
-  font-size: 14px;
+  font-size: 12px !important;
 }
 
+
+}
+
+@media (max-width: 375px) {
+
+  .icon-box {
+    width: 63px !important;
+    height: 37px !important;
+   }
+
+   .team-photo {
+    width: 130px !important;
+    height: 126px !important
+  }
+
+}
+
+@media (max-width: 320px) {
+
+    .icon-box {
+      width: 47px !important;
+      height: 39px !important;
+  }
+
+  .team-photo {
+    width: 115px !important;
+    height: 112px !important;
+}
+
+.team-name {
+  font-size: 13px !important;
+}
+
+.team-role {
+  font-size: 13px !important;
+}
 
 }

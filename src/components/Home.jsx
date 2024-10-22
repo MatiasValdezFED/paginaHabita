@@ -87,7 +87,7 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <h1> </h1>;
+      <div className="whiteBar"></div>
     </div>
   );
 }
