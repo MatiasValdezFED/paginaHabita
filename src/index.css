@@ -1,5 +1,6 @@
 :root {
-  font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -75,7 +76,7 @@ button:focus-visible {
 
 /* NavBar */
 
-.container-div{
+.container-div {
   display: flex;
   flex-direction: column-reverse;
 }
@@ -84,22 +85,21 @@ button:focus-visible {
   width: auto;
   height: 268px;
   border-bottom: 3px solid red;
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
 
-.img-logo.image-small{
+.img-logo.image-small {
   height: 50px;
   width: auto;
   max-width: 100px;
-  transition: all 0.3s ease-in-out; 
-
+  transition: all 0.3s ease-in-out;
 }
 
-.img-logo.hidden{
+.img-logo.hidden {
   opacity: 0;
 }
 
-.img-logo.displayed{
+.img-logo.displayed {
   opacity: 1;
 }
 
@@ -122,7 +122,7 @@ button:focus-visible {
   width: 100%;
 }
 
-.menu-items-container{
+.menu-items-container {
   width: 90%;
   margin: 10px auto;
   display: flex;
@@ -130,7 +130,7 @@ button:focus-visible {
   align-items: center;
 }
 
-.menu-items{
+.menu-items {
   display: flex;
   gap: 40px;
 }
@@ -150,14 +150,14 @@ button:focus-visible {
 }
 
 .link-nav::after {
-  content: ""; 
+  content: "";
   position: absolute;
-  left: 0; 
+  left: 0;
   top: 25px;
-  width: 0; 
-  height: 2px; 
+  width: 0;
+  height: 2px;
   background-color: red;
-  transition: width 0.7s ease-in-out; 
+  transition: width 0.7s ease-in-out;
 }
 
 .link-nav:hover::after {
@@ -221,7 +221,7 @@ button:focus-visible {
 
 /* Footer */
 .footer-container {
-  background-color: #BDBDBD; /* Color de fondo */
+  background-color: #bdbdbd; /* Color de fondo */
   padding: 20px 0;
 }
 
@@ -238,7 +238,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  width:  100px;
+  width: 100px;
   height: 50px;
   border-radius: 5px;
   background-color: white;
@@ -247,7 +247,6 @@ button:focus-visible {
   margin: 0 15px;
   transition: transform 0.3s;
 }
-
 
 .icon-box:hover {
   transform: scale(1.2);
@@ -258,14 +257,13 @@ p {
   color: #333;
 }
 
-
 /* ESTILOS DEL INICIO */
 
 /* Establecer un tamaño máximo para las imágenes del carrusel */
 .carousel-item img {
-  width: 100%;        /* Mantener el ancho completo del carrusel */
-  max-height: 500px;  /* Cambia este valor según el alto máximo deseado */
-  object-fit: cover;  /* Asegura que la imagen mantenga una proporción adecuada */
+  width: 100%; /* Mantener el ancho completo del carrusel */
+  max-height: 500px; /* Cambia este valor según el alto máximo deseado */
+  object-fit: cover; /* Asegura que la imagen mantenga una proporción adecuada */
 }
 
 /* Ajuste responsivo para pantallas más pequeñas */
@@ -317,8 +315,7 @@ p {
   text-align: center;
   margin: 0 0 20px 0; /* Mantén el margen inferior como está */
   padding: 10px 0; /* Mantén el padding como está */
-  min-height: 3.5rem; /* Define una altura mínima para mantener el espacio reservado */ 
-
+  min-height: 3.5rem; /* Define una altura mínima para mantener el espacio reservado */
 }
 
 /* Texto inferior (globo) */
@@ -333,16 +330,15 @@ p {
   padding: 10px 20px;
   border-radius: 20px;
   display: inline-block;
-  border: 2px solid #ce2200;  
+  border: 2px solid #ce2200;
   transition: background-color 0.3s ease;
 }
-
 
 /* ESTILOS DE SERVICIOS */
 
 /* Texto superior (globo) */
 .service-text {
-   /*
+  /*
   color: rgb(0, 0, 0);
   padding: 10px 20px;
   border-radius: 20px;
@@ -366,7 +362,7 @@ p {
   display: table; /*centra todo*/
   margin: 10px auto; /* Centrado y con espacio inferior */
   position: relative; /* Asegura que no flote sobre otros elementos */
-  z-index: 1; /* Asegura que no quede por detrás de otros elementos */ 
+  z-index: 1; /* Asegura que no quede por detrás de otros elementos */
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -395,7 +391,6 @@ p {
   background-repeat: no-repeat; /* Evita que se repita el ícono */
   background-position: center; /* Centra el ícono dentro del botón */
   filter: brightness(0) invert(1); /* Cambia el color a blanco */
-
 }
 
 /* Icono de flecha personalizada para la derecha */
@@ -405,7 +400,6 @@ p {
   background-repeat: no-repeat; /* Evita que se repita el ícono */
   background-position: center; /* Centra el ícono dentro del botón */
   filter: brightness(0) invert(1); /* Cambia el color a blanco */
-
 }
 
 /* Efecto de iluminación al pasar el cursor */
@@ -504,7 +498,6 @@ p {
   position: relative;
   z-index: 1;
   margin-bottom: 25px;
-
 }
 
 /* Estilo para el formulario */
@@ -578,7 +571,7 @@ p {
   overflow: hidden;
 }
 
-.ubiConteiner{
+.ubiConteiner {
   position: relative;
   padding: 40px;
   margin-bottom: 35%;
@@ -598,8 +591,6 @@ p {
   line-height: 24px;
   width: 115%;
 }
-
-
 
 /* About Us */
 .about-container {
@@ -623,7 +614,7 @@ p {
   left: 0;
   width: 100%;
   height: 57%;
-  background-image: url('src/assets/images/about/aboutus.jpg');
+  background-image: url("src/assets/images/about/aboutus.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.4;
@@ -637,7 +628,7 @@ p {
 }
 
 .about-title {
-    /* original
+  /* original
   font-size: 36px;
   color: #00293c;
   margin-bottom: 20px;
@@ -654,10 +645,8 @@ p {
   display: inline-block;
   margin: 0 auto 20px;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
   margin-top: 50px;
-
-
 }
 
 .about-description {
@@ -677,7 +666,6 @@ p {
   max-width: 800px;
   position: relative; /* Para que no se superponga a otros elementos */
   z-index: 0; /* Asegura que esté debajo del título */
-
 }
 
 /* Sección del equipo */
@@ -710,25 +698,25 @@ p {
   text-align: center;
   color: #00293c;
   display: flex;
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;      /* Centra verticalmente */
-  flex-direction: column;   /* Coloca los elementos en columna */ 
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Coloca los elementos en columna */
 }
 
 /* Estilo para las fotos circulares */
 .team-photo {
-  width: 150px;       /* Tamaño del círculo (puedes ajustar) */
-  height: 150px;      /* Tamaño del círculo (igual al ancho para hacer un círculo) */
+  width: 150px; /* Tamaño del círculo (puedes ajustar) */
+  height: 150px; /* Tamaño del círculo (igual al ancho para hacer un círculo) */
   border-radius: 50%; /* Hace que la imagen sea circular */
   background-color: #ccc; /* Color de fondo de ejemplo (para mostrar el círculo si no hay imagen) */
-  display: flex;      /* Flexbox en la imagen también, para centrar la imagen dentro del círculo */
+  display: flex; /* Flexbox en la imagen también, para centrar la imagen dentro del círculo */
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border: 1px solid red;
-  box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .team-photo img {
@@ -760,8 +748,7 @@ p {
 
 /* Responsive */
 
-@media (max-width: 2560px){
-
+@media (max-width: 2560px) {
   .about-description {
     font-size: 25px;
   }
@@ -778,14 +765,11 @@ p {
   .team-role {
     font-size: 23px;
   }
-  
-
 }
 
-@media (max-width: 1440px){
-
+@media (max-width: 1440px) {
   .about-description {
-    font-size: 17px  !important;
+    font-size: 17px !important;
   }
 
   .team-members {
@@ -797,72 +781,83 @@ p {
   }
 
   .team-photo {
-    width: 175px  !important;
-    height: 170px  !important;
+    width: 175px !important;
+    height: 170px !important;
   }
 
   .team-name {
     font-size: 25px !important;
+  }
 }
 
-}
-
-@media (max-width: 1024px){
-
+@media (max-width: 1024px) {
   .team-members {
     gap: 213px;
   }
 
   .about-description {
-    font-size: 17px  !important;
-}
+    font-size: 17px !important;
+  }
 
-.team-role {
-  font-size: 18px !important;
-}
+  .team-role {
+    font-size: 18px !important;
+  }
 
-.team-photo {
-  width: 175px  !important;
-  height: 170px  !important;
-}
+  .team-photo {
+    width: 175px !important;
+    height: 170px !important;
+  }
 
-.team-name {
-  font-size: 22px !important;
+  .team-name {
+    font-size: 22px !important;
+  }
 }
-
-}
-
 
 @media (max-width: 768px) {
+  .link-nav {
+    display: block;
+    margin-bottom: 5px;
+  }
 
-.team-members {
-  gap: 120px;
-}
+  .container-div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-.team-role {
-  font-size: 17px !important;
-}
+  .img-logo.image-big {
+    margin-right: 33px;
+  }
 
-.icon-container {
-  gap: 33px;
-}
+  .team-members {
+    gap: 120px;
+  }
 
-.about-description {
-  font-size: 15px !important;
-}
+  .team-role {
+    font-size: 17px !important;
+  }
 
-.team-photo {
-  width: 160px  !important;
-  height: 155px  !important;
-}
+  .icon-container {
+    gap: 33px;
+  }
 
-.team-name {
-  font-size: 20px !important;
-}
+  .about-description {
+    font-size: 15px !important;
+  }
 
+  .team-photo {
+    width: 160px !important;
+    height: 155px !important;
+  }
+
+  .team-name {
+    font-size: 20px !important;
+  }
 }
 
 @media (max-width: 425px) {
+  .img-logo.image-big {
+    margin-right: 78px;
+  }
 
   .icon-container {
     display: flex;
@@ -880,75 +875,77 @@ p {
 
   .img-logo.image-big {
     height: 100px;
-}
+  }
 
-.team-members {
-  gap: 5px;
-}
+  .team-members {
+    gap: 5px;
+  }
 
-.about-title {
-  font-size: 20px;
-  line-height: 1;
-  margin-top: 33px;
-}
+  .about-title {
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 33px;
+  }
 
-.team-title {
-  font-size: 20px;
-  margin: 0 0;
-}
+  .team-title {
+    font-size: 20px;
+    margin: 0 0;
+  }
 
-.team-photo {
-  width: 130px !important;
-  height: 126px !important
-}
+  .team-photo {
+    width: 130px !important;
+    height: 126px !important;
+  }
 
-.team-name {
-  font-size: 15px !important;
-}
+  .team-name {
+    font-size: 15px !important;
+  }
 
-.team-role {
-  font-size: 14px !important;
-}
+  .team-role {
+    font-size: 14px !important;
+  }
 
-.about-description {
-  font-size: 12px !important;
-}
-
-
+  .about-description {
+    font-size: 12px !important;
+  }
 }
 
 @media (max-width: 375px) {
+  .img-logo.image-big {
+    margin-right: 45px;
+  }
 
   .icon-box {
     width: 63px !important;
     height: 37px !important;
-   }
-
-   .team-photo {
-    width: 130px !important;
-    height: 126px !important
   }
 
+  .team-photo {
+    width: 130px !important;
+    height: 126px !important;
+  }
 }
 
 @media (max-width: 320px) {
+  .img-logo.image-big {
+    margin-right: 15px;
+  }
 
-    .icon-box {
-      width: 47px !important;
-      height: 39px !important;
+  .icon-box {
+    width: 47px !important;
+    height: 39px !important;
   }
 
   .team-photo {
     width: 115px !important;
     height: 112px !important;
-}
+  }
 
-.team-name {
-  font-size: 13px !important;
-}
+  .team-name {
+    font-size: 13px !important;
+  }
 
-.team-role {
-  font-size: 13px !important;
-}
-
+  .team-role {
+    font-size: 13px !important;
+  }
 }

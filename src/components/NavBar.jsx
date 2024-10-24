@@ -5,17 +5,17 @@ import Navbar from "react-bootstrap/Navbar";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "../index.css";
+import { FaBars } from "react-icons/fa"; // Icono de hamburguesa si prefieres usar un icono personalizado
+
 const NavBarHeight = 336;
 
 function ColorSchemesExample() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const scrollRef = useRef(false); // useRef para almacenar el valor de scroll
+  const scrollRef = useRef(false);
+  const [expanded, setExpanded] = useState(false); // Estado para controlar el menú desplegable
 
   const handleScroll = () => {
     const scrolled = window.scrollY >= NavBarHeight;
-    console.log(scrolled, window.scrollY);
-
-    // Actualiza el estado solo si es diferente al valor anterior
     if (scrollRef.current !== scrolled) {
       scrollRef.current = scrolled;
       setIsScrolled(scrolled);
@@ -24,7 +24,6 @@ function ColorSchemesExample() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -32,7 +31,12 @@ function ColorSchemesExample() {
 
   return (
     <>
-      <Navbar className={`nav`}>
+      <Navbar
+        expanded={expanded}
+        onToggle={() => setExpanded(!expanded)} // Controla el estado del menú hamburguesa
+        expand="lg" // Hace el navbar responsive
+        className={`nav`}
+      >
         <Container className="container-div">
           <Navbar.Brand href="/">
             <img
@@ -44,36 +48,61 @@ function ColorSchemesExample() {
             />
           </Navbar.Brand>
 
-          <Nav className="menu-container">
-            <Nav className="menu-items-container">
-              <Navbar.Brand href="/">
-                <img
-                  className={`img-logo image-small ${
-                    isScrolled ? "displayed" : "hidden"
-                  }`}
-                  src="/logo_solo.png"
-                  alt="Habita Logo"
-                />
-              </Navbar.Brand>
+          {/* Botón hamburguesa */}
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <FaBars style={{ color: "white" }} />{" "}
+            {/* Puedes usar este icono de hamburguesa */}
+          </Navbar.Toggle>
 
-              <Nav className="menu-items">
-                <Link className="link-nav" to={"/"}>
-                  Inicio
-                </Link>
-                <Link className="link-nav" to={"/about-us"}>
-                  ¿Quiénes Somos?
-                </Link>
-                <Link className="link-nav" to={"/services"}>
-                  Servicios
-                </Link>
-                <Link className="link-nav" to={"/contact"}>
-                  Contacto
-                </Link>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="menu-container">
+              <Nav className="menu-items-container">
+                <Navbar.Brand href="/">
+                  <img
+                    className={`img-logo image-small ${
+                      isScrolled ? "displayed" : "hidden"
+                    }`}
+                    src="/logo_solo.png"
+                    alt="Habita Logo"
+                  />
+                </Navbar.Brand>
+
+                <Nav className="menu-items">
+                  <Link
+                    className="link-nav"
+                    to={"/"}
+                    onClick={() => setExpanded(false)}
+                  >
+                    Inicio
+                  </Link>
+                  <Link
+                    className="link-nav"
+                    to={"/about-us"}
+                    onClick={() => setExpanded(false)}
+                  >
+                    ¿Quiénes Somos?
+                  </Link>
+                  <Link
+                    className="link-nav"
+                    to={"/services"}
+                    onClick={() => setExpanded(false)}
+                  >
+                    Servicios
+                  </Link>
+                  <Link
+                    className="link-nav"
+                    to={"/contact"}
+                    onClick={() => setExpanded(false)}
+                  >
+                    Contacto
+                  </Link>
+                </Nav>
               </Nav>
             </Nav>
-          </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
+
       <div className="wp__container">
         <a
           href="https://api.whatsapp.com/send/?phone=5493517886075"
