@@ -208,7 +208,7 @@ function Contact() {
             title="Ubicación Inmobiliaria"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.455624651259!2d-64.20004882362531!3d-31.40157059553653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329889a471325f%3A0x7fbfa9ebb33ea9a7!2sSta%20Fe%20944%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1727742766975!5m2!1ses-419!2sar"
             width="100%"
-            height="450"
+            height="300"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

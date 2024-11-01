@@ -462,7 +462,6 @@ p {
   display: flex;
   margin-bottom: 20px;
   margin-top: 16px;
-  height: 63vh;
   width: 100%;
 }
 
@@ -566,7 +565,7 @@ p {
 
 .map-container {
   width: 60%;
-  height: 85%;
+  height: 57%;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -574,7 +573,8 @@ p {
 .ubiConteiner {
   position: relative;
   padding: 40px;
-  margin-bottom: 35%;
+  height: 358px;
+  margin-top: 179px;
 }
 
 .countryTitle {
@@ -791,8 +791,8 @@ p {
 
   .ubiConteiner {
     padding: 45px;
-    margin-bottom: 25%;
-    margin-left: -35px;
+    margin-bottom: 0%;
+    margin-left: 0px;
   }
 }
 
@@ -829,6 +829,8 @@ p {
   .ubiConteiner {
     padding: 20px !important;
     margin-bottom: 0% !important;
+    height: 220px;
+    margin-top: 0px;
   }
 
   .map-container {
@@ -903,6 +905,7 @@ p {
 
   .map-container {
     width: 91%;
+    height: 36vh;
   }
 }
 
@@ -963,9 +966,8 @@ p {
 
   .containerContact {
     display: flex;
-    margin-bottom: 120px;
+    margin-bottom: 15px;
     margin-top: 18px;
-    height: 63vh;
     width: 100%;
     flex-direction: column-reverse;
   }
@@ -988,7 +990,7 @@ p {
   .title {
     padding: 4px 10px;
     font-size: 20px;
-    margin-top: 130px;
+    margin-top: 15px;
     width: 70% !important;
   }
 
@@ -1018,6 +1020,7 @@ p {
   .ubiConteiner {
     padding: 8px !important;
     margin-bottom: 0%;
+    height: 145px;
   }
 
   .map-container {
@@ -1032,11 +1035,11 @@ p {
   /*Servicio*/
 
   .carousel {
-    height: 60vh;
+    height: 71vh;
   }
 
   .services-carousel .carousel-inner {
-    margin-top: 10%;
+    margin-top: 45%;
   }
 
   .services-carousel .carousel-item {
@@ -1046,6 +1049,23 @@ p {
   .services-carousel .carousel-item img {
     width: 100vw;
     height: 100%;
+  }
+
+  .services-carousel .carousel-control-prev-icon,
+  .services-carousel .carousel-control-next-icon {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    background-size: 12px 12px;
+  }
+
+  .service-text {
+    font-size: 15px !important;
+    padding: 0px 5px;
+    border-radius: 10px;
+    width: fit-content;
+    display: inline-block;
+    margin: 5px;
   }
 }
 
@@ -1070,7 +1090,7 @@ p {
 
   /*Servicios*/
   .services-carousel .carousel-inner {
-    margin-top: 20% !important;
+    margin-top: 55% !important;
   }
 }
 
@@ -1113,8 +1133,8 @@ p {
 
   .services-carousel .carousel-control-prev-icon,
   .services-carousel .carousel-control-next-icon {
-    width: 24px;
-    height: 24px;
+    width: 17px;
+    height: 17px;
     padding: 5px;
     background-size: 12px 12px;
   }
