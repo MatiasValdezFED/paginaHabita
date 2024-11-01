@@ -526,6 +526,7 @@ p {
   border-radius: 5px;
   font-size: 16px;
   margin-bottom: 25px;
+  background-color: white !important;
 }
 
 /* Estilo para el textarea de Mensaje */
@@ -537,6 +538,7 @@ p {
   border-radius: 5px;
   font-size: 16px;
   margin-bottom: 20px;
+  background-color: white !important;
 }
 
 /* Botón Enviar */
