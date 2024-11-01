@@ -1028,6 +1028,25 @@ p {
   .countryTitle {
     margin-left: 30px !important;
   }
+
+  /*Servicio*/
+
+  .carousel {
+    height: 60vh;
+  }
+
+  .services-carousel .carousel-inner {
+    margin-top: 10%;
+  }
+
+  .services-carousel .carousel-item {
+    min-height: 0vh;
+  }
+
+  .services-carousel .carousel-item img {
+    width: 100vw;
+    height: 100%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1047,6 +1066,11 @@ p {
 
   .title {
     width: 85% !important;
+  }
+
+  /*Servicios*/
+  .services-carousel .carousel-inner {
+    margin-top: 20% !important;
   }
 }
 
@@ -1075,5 +1099,41 @@ p {
 
   .title {
     width: 95% !important;
+  }
+
+  /* SERVICIOS: Texto superior (globo) */
+  .service-text {
+    font-size: 10px !important; /* Fuerza el tamaño de la fuente */
+    padding: 0px 5px; /* Ajusta el padding del globo */
+    border-radius: 10px; /* Reduce el borde redondeado */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .services-carousel .carousel-control-prev-icon,
+  .services-carousel .carousel-control-next-icon {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    background-size: 12px 12px;
+  }
+
+  .services-carousel .carousel-item {
+    min-height: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .services-carousel .carousel-item img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .services-carousel .carousel-inner {
+    margin-top: 32% !important;
   }
 }

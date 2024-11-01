@@ -37,7 +37,10 @@ function AboutUs() {
         <div className="team-members">
           <div className="team-member">
             <div className="team-photo">
-              <img src="src/assets/images/about/wiwi.jpg" alt="Guido Bordino" />
+              <img
+                src="src/assets/images/about/wiwi.jpeg"
+                alt="Guido Bordino"
+              />
             </div>
             <h4 className="team-name">Dr Guido Bordino Somoza</h4>
             <p className="team-role">
@@ -52,7 +55,10 @@ function AboutUs() {
 
           <div className="team-member">
             <div className="team-photo">
-              <img src="src/assets/images/about/negro.jpg" alt="Adrián Pérez" />
+              <img
+                src="src/assets/images/about/negro.jpeg"
+                alt="Adrián Pérez"
+              />
             </div>
             <h4 className="team-name">Arq Adrián Pérez</h4>
             <p className="team-role">
