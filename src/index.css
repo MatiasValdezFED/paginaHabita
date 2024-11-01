@@ -788,6 +788,12 @@ p {
   .team-name {
     font-size: 25px !important;
   }
+
+  .ubiConteiner {
+    padding: 45px;
+    margin-bottom: 25%;
+    margin-left: -35px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -810,6 +816,23 @@ p {
 
   .team-name {
     font-size: 22px !important;
+  }
+
+  .rightColumn {
+    flex-direction: column;
+  }
+
+  .countryTitle {
+    margin-left: 27px;
+  }
+
+  .ubiConteiner {
+    padding: 20px !important;
+    margin-bottom: 0% !important;
+  }
+
+  .map-container {
+    width: 91%;
   }
 }
 
@@ -851,6 +874,35 @@ p {
 
   .team-name {
     font-size: 20px !important;
+  }
+
+  .title {
+    width: 50%;
+  }
+
+  .row {
+    width: 85%;
+  }
+
+  .textarea {
+    width: 85%;
+  }
+
+  .rightColumn {
+    flex-direction: column;
+  }
+
+  .countryTitle {
+    margin-left: 27px;
+  }
+
+  .ubiConteiner {
+    padding: 20px;
+    margin-bottom: 0%;
+  }
+
+  .map-container {
+    width: 91%;
   }
 }
 
@@ -908,6 +960,74 @@ p {
   .about-description {
     font-size: 12px !important;
   }
+
+  .containerContact {
+    display: flex;
+    margin-bottom: 120px;
+    margin-top: 18px;
+    height: 63vh;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .leftColumn {
+    width: 100%;
+    height: 40%;
+  }
+
+  .rightColumn {
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+  }
+
+  .form-group {
+    max-width: 260px;
+  }
+
+  .title {
+    padding: 4px 10px;
+    font-size: 20px;
+    margin-top: 130px;
+    width: 70% !important;
+  }
+
+  .submit-btn {
+    height: 42px;
+    width: 102px;
+    font-size: 15px;
+  }
+
+  .textarea {
+    height: 65px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    width: 100% !important;
+  }
+
+  .row {
+    margin-bottom: 0px;
+    width: 100% !important;
+  }
+
+  .input {
+    height: 33px;
+    font-size: 15px;
+  }
+
+  .ubiConteiner {
+    padding: 8px !important;
+    margin-bottom: 0%;
+  }
+
+  .map-container {
+    width: 88% !important;
+    height: 60%;
+  }
+
+  .countryTitle {
+    margin-left: 30px !important;
+  }
 }
 
 @media (max-width: 375px) {
@@ -923,6 +1043,10 @@ p {
   .team-photo {
     width: 130px !important;
     height: 126px !important;
+  }
+
+  .title {
+    width: 85% !important;
   }
 }
 
@@ -947,5 +1071,9 @@ p {
 
   .team-role {
     font-size: 13px !important;
+  }
+
+  .title {
+    width: 95% !important;
   }
 }
