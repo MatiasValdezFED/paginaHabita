@@ -540,6 +540,7 @@ p {
   font-size: 16px;
   margin-bottom: 20px;
   background-color: white !important;
+  color: black !important;
 }
 
 /* Botón Enviar */
@@ -928,7 +929,7 @@ p {
 @media (max-width: 425px) {
   /* Inicio */
   .carousel {
-    height: 27vh;
+    height: 36vh !important;
   }
 
   .carousel-item img {
@@ -1079,10 +1080,6 @@ p {
 
   /*Servicio*/
 
-  .carousel {
-    height: 27vh;
-  }
-
   .services-carousel .carousel-inner {
     margin-top: 45%;
   }
@@ -1115,6 +1112,10 @@ p {
 }
 
 @media (max-width: 375px) {
+  .carousel {
+    height: 36vh !important;
+  }
+
   .img-logo.image-big {
     margin-right: 45px;
   }
@@ -1140,6 +1141,24 @@ p {
 }
 
 @media (max-width: 320px) {
+  .carousel {
+    height: 36vh !important;
+  }
+  .small-text {
+    padding: 0px 13px !important;
+    font-size: 13px !important;
+  }
+
+  .large-text {
+    font-size: 16px !important;
+    line-height: 27.52px !important;
+  }
+
+  .button-text {
+    font-size: 14px !important;
+    line-height: 28.67px !;
+  }
+
   .img-logo.image-big {
     margin-right: 15px;
   }
