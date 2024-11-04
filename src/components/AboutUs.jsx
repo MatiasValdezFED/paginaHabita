@@ -42,7 +42,7 @@ function AboutUs() {
                 alt="Guido Bordino"
               />
             </div>
-            <h4 className="team-name">Dr Guido Bordino Somoza</h4>
+            <h4 className="team-name">Dr. Guido Bordino Somoza</h4>
             <p className="team-role">
               Abogado recibido de la Universidad Católica de Córdoba (UCC) con
               especialización en derecho inmobiliario.
@@ -60,7 +60,7 @@ function AboutUs() {
                 alt="Adrián Pérez"
               />
             </div>
-            <h4 className="team-name">Arq Adrián Pérez</h4>
+            <h4 className="team-name">Arq. Adrián Pérez</h4>
             <p className="team-role">
               Arquitecto recibido de la Universidad Nacional de Córdoba (FAUD -
               UNC) especializado en patologías de la construcción.

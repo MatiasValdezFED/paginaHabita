@@ -767,6 +767,10 @@ p {
   .team-role {
     font-size: 23px;
   }
+
+  .countryTitle {
+    margin-left: 23px !important;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -825,7 +829,7 @@ p {
   }
 
   .countryTitle {
-    margin-left: 27px;
+    margin-left: 27px !important;
   }
 
   .ubiConteiner {
@@ -881,11 +885,16 @@ p {
   }
 
   .title {
-    width: 50%;
+    width: 91%;
+    font-size: 20px;
   }
 
   .row {
     width: 85%;
+  }
+
+  .input {
+    color: black;
   }
 
   .textarea {
@@ -897,7 +906,11 @@ p {
   }
 
   .countryTitle {
-    margin-left: 27px;
+    margin-left: 0px !important;
+  }
+
+  .streetDescription {
+    width: 100% !important;
   }
 
   .ubiConteiner {
@@ -1017,6 +1030,7 @@ p {
   .input {
     height: 33px;
     font-size: 15px;
+    color: black;
   }
 
   .ubiConteiner {
@@ -1028,10 +1042,6 @@ p {
   .map-container {
     width: 88% !important;
     height: 60%;
-  }
-
-  .countryTitle {
-    margin-left: 30px !important;
   }
 
   /*Servicio*/
