@@ -14,10 +14,11 @@ function Home() {
         controls={false}
         indicators={false}
         pause="false"
+        className="inicio-carousel"
       >
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 img-pos-right"
             src={"src/assets/images/inicio/img1.png"}
             alt="Primera imagen"
           />
@@ -41,7 +42,7 @@ function Home() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 img-pos-right-2"
             src={"src/assets/images/inicio/img2.png"}
             alt="Segunda imagen"
           />
@@ -64,7 +65,7 @@ function Home() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 img-pos-left"
             src={"src/assets/images/inicio/img3.png"}
             alt="Tercera imagen"
           />

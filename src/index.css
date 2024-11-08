@@ -260,21 +260,14 @@ p {
 /* ESTILOS DEL INICIO */
 
 /* Establecer un tamaño máximo para las imágenes del carrusel */
-.carousel-item img {
+.inicio-carousel .carousel-item img {
   width: 100%; /* Mantener el ancho completo del carrusel */
   max-height: 500px; /* Cambia este valor según el alto máximo deseado */
   object-fit: cover; /* Asegura que la imagen mantenga una proporción adecuada */
 }
 
-/* Ajuste responsivo para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .carousel-item img {
-    max-height: 300px; /* Reduce el alto para pantallas más pequeñas */
-  }
-}
-
 /* Contenedor de los textos (mantiene todo centrado y alineado) */
-.carousel-caption {
+.inicio-carousel .carousel-caption {
   position: absolute;
   top: 0;
   left: 0;
@@ -412,8 +405,8 @@ p {
 /* Ajuste del área de clic de las flechas */
 .services-carousel .carousel-control-prev,
 .services-carousel .carousel-control-next {
-  width: 7%; /* Ajusta el área de clic de las flechas si es necesario */
-  height: 100%; /* Asegura que el área de clic cubra el botón */
+  width: 5%; 
+  height: 100%; 
 }
 
 /* Ajuste del tamaño del carrusel */
@@ -802,6 +795,54 @@ p {
     margin-bottom: 0%;
     margin-left: 0px;
   }
+
+ /*INICIO responsive 1440px --->*/
+ .inicio-carousel .carousel-inner {
+  overflow: hidden;
+  height: 386px;
+}
+.inicio-carousel .carousel-item img {
+  height: 398px;       
+  object-fit: cover; 
+}
+
+/* Imagen desplazada un poco hacia la derecha */
+.img-pos-right {
+  object-position: 60% center;
+}
+
+/* Imagen desplazada un poco hacia la izquierda */
+.img-pos-left {
+  object-position: 37% center;
+}
+
+.inicio-carousel .carousel-caption {
+    bottom: -28px !important;
+    margin-top: -13px;
+
+}
+
+.small-text {
+  padding: 6px 17px;
+  margin-bottom: 20px !important;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.large-text {
+  font-size: 38px;
+  padding: 45px 0;
+  line-height: 1.1;
+}
+
+.button-text {
+  padding: 6px 17px;
+  margin-bottom: 20px !important;
+  font-size: 18px;
+  margin: 0px;
+}
+  /*INICIO <---*/  
+
 }
 
 @media (max-width: 1024px) {
@@ -844,6 +885,18 @@ p {
   .map-container {
     width: 91%;
   }
+
+  /* SERVICIO  ---> */
+
+  .services-carousel .carousel-control-prev-icon,
+  .services-carousel .carousel-control-next-icon {
+      width: 55px !important;
+      height: 55px !important;
+      background-size: 9px 9px;  
+  }
+
+  /* SERVICIO <--- */
+
 }
 
 @media (max-width: 768px) {
@@ -924,40 +977,138 @@ p {
     width: 91%;
     height: 36vh;
   }
+
+    /*INICIO responsive 768px*/
+.inicio-carousel .carousel-inner {
+  overflow: hidden;
+  height: 386px;
+}
+.inicio-carousel .carousel-item img {
+  height: 398px;       
+  object-fit: cover; 
+}
+
+/* Imagen desplazada un poco hacia la derecha */
+.img-pos-right {
+  object-position: 60% center;
+}
+
+/* Imagen desplazada un poco hacia la izquierda */
+.img-pos-left {
+  object-position: 37% center;
+}
+
+.inicio-carousel .carousel-caption {
+    bottom: -28px !important;
+    margin-top: -13px;
+
+}
+
+.small-text {
+  padding: 6px 17px;
+  margin-bottom: 20px !important;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.large-text {
+  font-size: 38px;
+  padding: 45px 0;
+  line-height: 1.1;
+}
+
+.button-text {
+  padding: 6px 17px;
+  margin-bottom: 20px !important;
+  font-size: 18px;
+  margin: 0px;
+}
+  /*INICIO <---*/
+
+  /*Servicios*/
+.services-carousel .carousel {
+  height: 680px;
+}
+
+.services-carousel .carousel-inner {
+  height: auto;
+}
+
+.services-carousel .carousel-control-prev-icon,
+.services-carousel .carousel-control-next-icon {
+  width: 35px !important;
+  height: 35px !important;
+  background-size: 12px 12px;
+}
+
+.service-text {
+  font-size: 15px !important;
+  padding: 0px 5px;
+  border-radius: 10px;
+  width: fit-content; 
+  display: inline-block;
+  margin: 5px;
+}
+/* SERVICIOS responsive final*/
+
 }
 
 @media (max-width: 425px) {
-  /* Inicio */
-  .carousel {
-    height: 36vh !important;
-  }
 
-  .carousel-item img {
-    height: 100%;
+  
+  /*INICIO responsive 425px*/
+  .inicio-carousel .carousel-inner {
+    overflow: hidden;
+    height: 320px; /* Reducido para adaptarse a pantallas más pequeñas */
   }
-
-  .carousel-item {
-    height: 100%;
+  
+  .inicio-carousel .carousel-item img {
+    height: 320px;      /* Altura reducida para mantener proporción */
+    object-fit: cover; 
   }
-
-  .carousel-inner {
-    height: 100%;
+  
+  /* Imagen desplazada un poco hacia la derecha */
+  .img-pos-right {
+    object-position: 66% center; /* Ajuste adicional para centrar el foco */
   }
-
-  .large-text {
-    font-size: 23px;
-    line-height: 29.52px;
+  
+  /* Imagen desplazada un poco hacia la izquierda */
+  .img-pos-left {
+    object-position: 33% center; /* Ajuste para un mejor enfoque */
   }
-
-  .button-text {
-    font-size: 15px;
-    line-height: 30.67px;
+  
+  .inicio-carousel .carousel-caption {
+    bottom: -20px !important; /* Ajustado para adaptarse a pantallas pequeñas */
+    margin-top: -10px;
   }
-
+  
   .small-text {
-    padding: 3px 20px;
-    font-size: 15px;
+    padding: 2px 12px;
+    /* margin-bottom: 15px !important; */
+    font-size: 11px;
+    margin-top: -4px;
   }
+  
+    .large-text {
+      width: 100% !important;
+      font-size: 24px;
+      padding: 25px 0;
+      line-height: 1.1;
+      text-align: center;
+      margin: 0;
+      min-height: 60px;       /* Ajusta para mantener una altura mínima */
+      max-height: 80px;       /* Ajusta para limitar la altura máxima */
+      /*overflow: hidden;       /* Oculta el texto si excede la altura máxima */
+    }
+
+  
+  .button-text {
+    padding: 0px 12px;
+    margin-bottom: 15px !important;
+    font-size: 12px;
+    margin-top: 85px;
+}
+    /*INICIO responsive 425px cierre*/  
 
   .img-logo.image-big {
     margin-right: 78px;
@@ -1078,43 +1229,40 @@ p {
     height: 60%;
   }
 
-  /*Servicio*/
+  /*Servicios*/
+
+  .services-carousel .carousel-control-prev, 
+  .services-carousel .carousel-control-next {
+        width: 6%;
+        height: 100%;
+    }
 
   .services-carousel .carousel-inner {
-    margin-top: 45%;
-  }
-
-  .services-carousel .carousel-item {
-    min-height: 0vh;
-  }
-
-  .services-carousel .carousel-item img {
-    width: 100vw;
-    height: 100%;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
   }
 
   .services-carousel .carousel-control-prev-icon,
   .services-carousel .carousel-control-next-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px !important;
+    height: 22px !important;
     padding: 5px;
     background-size: 12px 12px;
   }
 
   .service-text {
-    font-size: 15px !important;
-    padding: 0px 5px;
-    border-radius: 10px;
-    width: fit-content;
+    font-size: 15px !important; /* Fuerza el tamaño de la fuente */
+    padding: 0px 5px; /* Ajusta el padding del globo */
+    border-radius: 10px; /* Reduce el borde redondeado */
+    width: fit-content; /* Ajusta el ancho al contenido */
     display: inline-block;
     margin: 5px;
   }
+/* SERVICIOS responsive final*/
+
 }
 
 @media (max-width: 375px) {
-  .carousel {
-    height: 36vh !important;
-  }
 
   .img-logo.image-big {
     margin-right: 45px;
@@ -1135,29 +1283,56 @@ p {
   }
 
   /*Servicios*/
+  .services-carousel .carousel-control-prev, 
+  .services-carousel .carousel-control-next {
+        width: 6%;
+        height: 100%;
+    }
+
   .services-carousel .carousel-inner {
-    margin-top: 55% !important;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
   }
+
+  .services-carousel .carousel-control-prev-icon,
+  .services-carousel .carousel-control-next-icon {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    background-size: 12px 12px;
+  }
+
+  .service-text {
+    font-size: 15px !important; /* Fuerza el tamaño de la fuente */
+    padding: 0px 5px; /* Ajusta el padding del globo */
+    border-radius: 10px; /* Reduce el borde redondeado */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    display: inline-block;
+    margin: 5px;
+  }
+  /* SERVICIOS responsive final*/
+
+ /*INICIO responsive 375px*/
+
+/* Imagen desplazada un poco hacia la derecha */
+.img-pos-right {
+  object-position: 68% center;
+}
+
+.img-pos-right-2 {
+  object-position: 52% center;
+}
+
+/* Imagen desplazada un poco hacia la izquierda */
+.img-pos-left {
+  object-position: 37% center;
+}
+
+  /*INICIO <---*/
+
 }
 
 @media (max-width: 320px) {
-  .carousel {
-    height: 36vh !important;
-  }
-  .small-text {
-    padding: 0px 13px !important;
-    font-size: 13px !important;
-  }
-
-  .large-text {
-    font-size: 16px !important;
-    line-height: 27.52px !important;
-  }
-
-  .button-text {
-    font-size: 14px !important;
-    line-height: 28.67px !;
-  }
 
   .img-logo.image-big {
     margin-right: 15px;
@@ -1185,7 +1360,32 @@ p {
     width: 95% !important;
   }
 
-  /* SERVICIOS: Texto superior (globo) */
+  /*INICIO responsive 320px ---> */
+  .inicio-carousel .carousel-inner {
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+  }
+
+  .img-pos-right {
+    object-position: 70% center;
+  }
+  
+  .img-pos-right-2 {
+    object-position: 55% center;
+  }
+  
+  /* Imagen desplazada un poco hacia la izquierda */
+  .img-pos-left {
+    object-position: 43% center;
+  }
+
+  .large-text {
+    font-size: 22px !important;
+}
+
+  /*INICIO <--- */
+
+  /* SERVICIOS ---> */
   .service-text {
     font-size: 10px !important; /* Fuerza el tamaño de la fuente */
     padding: 0px 5px; /* Ajusta el padding del globo */
@@ -1195,13 +1395,23 @@ p {
     margin: 5px;
   }
 
+  /*.services-carousel .carousel {
+    height: 535px !important;
+  }*/
+
   .services-carousel .carousel-control-prev-icon,
   .services-carousel .carousel-control-next-icon {
-    width: 17px;
-    height: 17px;
-    padding: 5px;
-    background-size: 12px 12px;
+      width: 15px !important;
+      height: 15px !important;
+      background-size: 9px 9px;  
   }
+
+  .services-carousel .carousel-control-prev, 
+  .services-carousel .carousel-control-next {
+    width: 6% !important;
+    height: 93% !important;
+}
+
 
   .services-carousel .carousel-item {
     min-height: 0vh;
@@ -1218,6 +1428,9 @@ p {
   }
 
   .services-carousel .carousel-inner {
-    margin-top: 32% !important;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
   }
+
+  /* SERVICIOS <--- */
 }
